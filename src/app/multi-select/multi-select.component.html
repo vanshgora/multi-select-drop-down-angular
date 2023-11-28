@@ -1,0 +1,18 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-4 display py-1" style="display: flex; overflow: scroll; border: 1px solid; height: 40px;">
+            <div *ngFor="let obj of selected"
+             class="tags mx-2 py-1 px-2" style="border-radius: 30px; background: teal; color: white; width: fit-content;" >
+             {{all[obj-1].name}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div *ngFor="let obj of all">
+                <input type="checkbox" (click) = "onclicked($event)" [value]="obj.value" [id]="obj.name" />
+                <label [for]="obj.name">{{obj.name}}</label>
+            </div>
+        </div>
+    </div>
+</div>
