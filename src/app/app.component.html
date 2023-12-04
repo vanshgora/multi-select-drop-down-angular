@@ -1,1 +1,4 @@
-<app-multi-select [options]="arr"></app-multi-select>
+<div class="col-md-6">
+    <label for="" class=" form-label">Select options<sup>*</sup></label>
+    <app-multi-select (selectedArrayChange)="onSelectedChange($event)" [options]="arr"></app-multi-select>
+</div>
